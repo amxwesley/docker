@@ -3,9 +3,9 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    req.send('Bye there');
+    res.send('Bye there');
 });
 
-app.listen(8080, () => {
-    console.log('Listening on port 8080');
+app.listen(3003, () => {
+    console.log('Listening on port 3003');
 });
