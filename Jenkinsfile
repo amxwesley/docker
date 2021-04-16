@@ -11,5 +11,10 @@ pipeline {
                 sh 'npm install' 
             }
         }
+        stage('Build Image'){
+            steps{
+                sh 'docker build -t amxwesley/docker .'
+            }
+        }
     }
 }
