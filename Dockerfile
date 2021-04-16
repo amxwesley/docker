@@ -1,6 +1,7 @@
 #specify a base image
 
 FROM node:alpine
+USER root
 
 WORKDIR /usr/app
 
