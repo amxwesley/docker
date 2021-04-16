@@ -1,14 +1,13 @@
 #specify a base image
 
-FROM node:14-buster
+FROM node:alpine
 
 WORKDIR /usr/app
 
 #install some dependencies
 
 COPY ./package.json ./
-RUN npm --version
-RUN npm install -g --save dompurify@2.0.8 redoc-cli
+RUN npm install
 COPY ./ ./
 
 #default command
