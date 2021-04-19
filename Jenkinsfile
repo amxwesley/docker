@@ -3,7 +3,6 @@ pipeline {
         docker {
             image 'node:alpine' 
             args '-p 3003:3003' 
-            args '-u root:sudo -v'
         }
     }
     stages {
