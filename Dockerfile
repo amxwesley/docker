@@ -8,6 +8,7 @@ WORKDIR /usr/app
 #install some dependencies
 
 COPY ./package.json ./
+RUN npm -g config set user root
 RUN npm install
 COPY ./ ./
 
