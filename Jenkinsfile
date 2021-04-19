@@ -15,8 +15,8 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                sh 'sudo npm -g config set user root'
-                sh 'sudo npm install'
+                sh 'npm -g config set user root'
+                sh 'npm install'
             }
         }
         stage('Build Image'){
