@@ -6,6 +6,13 @@ pipeline {
         }
     }
     stages {
+        stage('Clone') {
+            steps {
+                git branch: 'master',
+                   // credentialsId: '121231k3jkj2kjkjk',
+                    url: 'https://github.com/amxwesley/docker.git'
+            }
+        }
         stage('Build') { 
             steps {
                 sh 'npm install'
